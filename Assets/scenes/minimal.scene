@@ -39,7 +39,7 @@
           "__guid": "d3659344-a90d-48fa-927a-095f70fe041f",
           "FogMode": "Enabled",
           "FogStrength": 1,
-          "LightColor": "0.94419,0.97767,1,1",
+          "LightColor": "1,1,1,1",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -47,7 +47,7 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "Shadows": true,
-          "SkyColor": "0.2532,0.32006,0.35349,1"
+          "SkyColor": "0.3627,0.74726,0.93953,1"
         }
       ]
     },
@@ -89,10 +89,10 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "Projection": "Sphere",
+          "Projection": "Box",
           "RenderDynamically": false,
           "Resolution": "Small",
-          "Texture": "textures/cubemaps/default2.vtex",
+          "Texture": "textures/cubemaps/default.vtex",
           "TintColor": "1,1,1,1",
           "UpdateStrategy": "OnEnabled",
           "ZFar": 4096,
@@ -113,7 +113,7 @@
           "BodyGroups": 18446744073709551615,
           "CreateAttachments": false,
           "MaterialGroup": null,
-          "MaterialOverride": "materials/default.vmat",
+          "MaterialOverride": "materials/orange/dev_grid_orange.vmat",
           "Model": "models/dev/plane.vmdl",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -456,7 +456,7 @@
           "ExposureMethod": "RGB",
           "MaximumExposure": 2,
           "MinimumExposure": 1,
-          "Mode": "HableFilmic",
+          "Mode": "ACES",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -724,17 +724,15 @@
       ]
     },
     {
-      "__guid": "63c0bbb8-cdbf-4d35-b8a0-92a8ba7bc8c1",
+      "__guid": "1c20749b-e6e9-45e4-b627-d8b92c195b2d",
       "Flags": 0,
-      "Name": "water",
-      "Position": "70.52769,-64.68903,52.54117",
-      "Scale": "3.558058,1,2.0732",
-      "Tags": "water",
+      "Name": "Cube",
+      "Position": "124.232,-96.61313,25.39464",
       "Enabled": true,
       "Components": [
         {
           "__type": "Sandbox.ModelRenderer",
-          "__guid": "48bda799-3e12-466c-9876-9cc31adedeb2",
+          "__guid": "8630780c-7a55-4384-9cec-de0ff6b6837c",
           "BodyGroups": 18446744073709551615,
           "CreateAttachments": false,
           "MaterialGroup": null,
@@ -753,28 +751,20 @@
             "AfterUILayer": false
           },
           "RenderType": "On",
-          "Tint": "0.17473,0.79269,0.91628,0.32"
+          "Tint": "1,1,1,1"
         },
         {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "bae0df77-95ff-42b1-9020-4bb1ffa4ddd8",
-          "Center": "0,0,0",
-          "Friction": null,
-          "IsTrigger": true,
+          "__type": "EvilCubeComponent",
+          "__guid": "2da5fe94-461a-40d9-a89f-a267f1d92475",
+          "MaxHealth": 0,
+          "Name": "Diego The Cube",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "OnObjectTriggerEnter": null,
-          "OnObjectTriggerExit": null,
-          "OnTriggerEnter": null,
-          "OnTriggerExit": null,
-          "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null,
-          "SurfaceVelocity": "0,0,0"
+          "Team": "Blue"
         }
       ]
     }
@@ -807,6 +797,8 @@
   "ResourceVersion": 2,
   "Title": "minimal",
   "Description": null,
-  "__references": [],
+  "__references": [
+    "matek.dev_grid_orange#46465"
+  ],
   "__version": 2
 }
